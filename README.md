@@ -27,7 +27,8 @@ It consists of the following files:
     approach to feature engineering that allows re-use of the same
     code during experimental sandbox training and real-time prediction.
   
-To run the example model, type `run("example1")`. This uses
+To run the example model, open an R console from the root of this project
+and type `run("example1")`. (All dependencies should auto-install.) This uses
 [fuzzy matching](https://github.com/kien/ctrlp.vim), so you can
 run the model by leaving out letters as long as they appear
 consecutively in the model filename: `run("ex1")` or `run("mple")` will
