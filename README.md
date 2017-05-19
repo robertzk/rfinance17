@@ -10,9 +10,13 @@ It is organized as follows:
   the example model by opening R from the root of this project and 
   executing `run("example")`. Notice that following this with
   `model$predict(iris[1:5, ])` gives you some predictions.
+* The [Syberia talk slides](syberia_slides.pdf) (or [PPT format](https://github.com/robertzk/rfinance17/blob/master/syberia_slides.pptx)).
 
 
-### Project details
+### Execution
+
+
+## Project details
 
 This repository gives a full example of how to use Syberia
 for a simple structured supervised learning project.
