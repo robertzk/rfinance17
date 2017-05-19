@@ -1,0 +1,37 @@
+language: c
+sudo: false
+addons:
+  apt:
+    sources:
+    - r-packages-precise
+    packages:
+    - r-base-dev
+    - r-recommended
+    - pandoc
+env:
+- global:
+  - TRAVIS=true
+  - R_LIBS_USER=~/.R/library
+cache:
+  directories: "~/.R"
+before_script:
+- rm -rf "/home/travis/.R/.syberia"
+- mkdir -p "$R_LIBS_USER"
+- Rscript -e 'if (!require("devtools")) install.packages("devtools", repos = "http://cran.rstudio.com/")'
+- Rscript -e 'if (!require("plyr")) install.packages("plyr", repos = "http://cran.rstudio.com/")'
+- Rscript -e 'if (!require("pryr")) install.packages("pryr", repos = "http://cran.rstudio.com/")'
+- Rscript -e 'if (!require("XML")) install.packages("XML", repos = "http://cran.rstudio.com/")'
+- Rscript -e 'if (!require("httr")) install.packages("httr", repos = "http://cran.rstudio.com/")'
+- Rscript -e 'if (!require("yaml")) install.packages("yaml", repos = "http://cran.rstudio.com/")'
+- Rscript -e 'if (!require("digest")) install.packages("digest", repos = "http://cran.rstudio.com/")'
+- Rscript -e 'if (!require("crayon")) install.packages("crayon", repos = "http://cran.rstudio.com/")'
+script: Rscript -e 'library(syberia); library(methods); devtools::with_options(list(stub
+  = 1), force); syberia::syberia_engine(); quit(status = tryCatch({ syberia::test_engine();
+  0 }, error = function(e) { message(e); message(bettertrace::stacktrace()); 1 }));'
+notifications:
+  email:
+    on_success: change
+    on_failure: change
+  hipchat:
+    rooms:
+      secure: hzSpqQuz5reCS4MOHppWHQMlilqTDTo6hKDVusankZlfeD+pf6cXidw6eBd98G1Vd7qS2UwvELZnJvoMe7qkMuBzLjLH+H/0o+j/2Fnz2+HeapypSxGlHxGI/uIDJujzo4V3r5ahPEt2Nt9IV9pYEYpwNOGPiJL5UzX56ri4wM0suWrHyikNFfSUKSbPBmYsDavn/3l8AR6cUEG+MTfF2gIEQ31y+VBY4IJa3GW0yaoQHD7DvyOI2oIMGp9LSkFruC40A2npy6Upqv48jU/45ZUm8jkTA5f+pUNockL1HTeAmC6yolSNKKgncevhbtSMlehyCIOsJgOpQeO4Phz+363k3iv/j3o0iL5ziI/4GYd19P0OuBlfBI+xtqMa9Rrbrc3pd1iuh+tdkwF7EbDl72eQOfnayDJEKMEFRhZxSdqHzQ21mdJhuW87x2jKkFJ6LP0APEr4BnxUwnYpTSizBbQiL+e/W6IDKqNrmhpryv3nmNvjoQPZFGIz/RxZnww3Lfhn0F0DtBkZICFItSIV5kPZJeIZpJLDxfuOdOwCigJwemw2dE2MjPrKA2rpwOed4YvKmUq/fIQLLIsMLpz5byuF/2VEvPivFRiTr21WXN8gJGDf91KBVRW+Z96khN3js0i6G2O+LjtMHtOoNv16062Np2VJ5QQEufs3Wbac5Uo=
