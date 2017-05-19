@@ -12,9 +12,9 @@ It is organized as follows:
   `model$predict(iris[1:5, ])` gives you some predictions.
 * The [Syberia talk slides](syberia_slides.pdf) (or [PPT format](https://github.com/robertzk/rfinance17/blob/master/syberia_slides.pptx)).
 
-
 ### Execution
 
+TODO: Fill in.
 
 ## Project details
 
