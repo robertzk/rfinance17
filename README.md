@@ -14,7 +14,18 @@ It is organized as follows:
 
 ### Execution
 
-TODO: Fill in.
+Open R from the root of this project.
+
+```r
+# Running the titanic example.
+run("titanic", to = 1)
+data <- within(A, X <- NULL)
+run("titanic")
+titanic$predict(data)
+
+# Running the survey example
+run("survey")
+```
 
 ## Project details
 
