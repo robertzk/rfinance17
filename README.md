@@ -1,6 +1,7 @@
 ## Examples for the R/finance 2017 conference
 
-See the [main Syberia repo](https://github.com/syberia/syberia) when you feel ready.
+See the [main Syberia repo](https://github.com/syberia/syberia) when you feel ready
+or [check out the website](https://syberia.io).
 
 This repository holds some examples and slides for the [R/finance 2017
 conference](http://www.rinfinance.com/) presentation on 
