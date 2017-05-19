@@ -32,6 +32,8 @@ run("survey")
 
 ## Project details
 
+(Copy pasted from another repo so slightly incorrect.)
+
 This repository gives a full example of how to use Syberia
 for a simple structured supervised learning project.
 It consists of the following files: 
