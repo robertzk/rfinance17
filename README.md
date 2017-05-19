@@ -4,6 +4,13 @@ This repository holds some examples and slides for the [R/finance 2017
 conference](http://www.rinfinance.com/) presentation on 
 [Syberia](https://github.com/syberia/syberia).
 
+It is organized as follows:
+
+* The project itself is a [Syberia project](https://syberia.io). You can run
+  the example model by opening R from the root of this project and 
+  executing `run("example")`. Notice that following this with
+  `model$predict(iris[1:5, ])` gives you some predictions.
+
 
 ### Project details
 
