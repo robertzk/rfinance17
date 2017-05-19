@@ -35,3 +35,8 @@ notifications:
   hipchat:
     rooms:
       secure: hzSpqQuz5reCS4MOHppWHQMlilqTDTo6hKDVusankZlfeD+pf6cXidw6eBd98G1Vd7qS2UwvELZnJvoMe7qkMuBzLjLH+H/0o+j/2Fnz2+HeapypSxGlHxGI/uIDJujzo4V3r5ahPEt2Nt9IV9pYEYpwNOGPiJL5UzX56ri4wM0suWrHyikNFfSUKSbPBmYsDavn/3l8AR6cUEG+MTfF2gIEQ31y+VBY4IJa3GW0yaoQHD7DvyOI2oIMGp9LSkFruC40A2npy6Upqv48jU/45ZUm8jkTA5f+pUNockL1HTeAmC6yolSNKKgncevhbtSMlehyCIOsJgOpQeO4Phz+363k3iv/j3o0iL5ziI/4GYd19P0OuBlfBI+xtqMa9Rrbrc3pd1iuh+tdkwF7EbDl72eQOfnayDJEKMEFRhZxSdqHzQ21mdJhuW87x2jKkFJ6LP0APEr4BnxUwnYpTSizBbQiL+e/W6IDKqNrmhpryv3nmNvjoQPZFGIz/RxZnww3Lfhn0F0DtBkZICFItSIV5kPZJeIZpJLDxfuOdOwCigJwemw2dE2MjPrKA2rpwOed4YvKmUq/fIQLLIsMLpz5byuF/2VEvPivFRiTr21WXN8gJGDf91KBVRW+Z96khN3js0i6G2O+LjtMHtOoNv16062Np2VJ5QQEufs3Wbac5Uo=
+    on_success: change
+    on_failure: change
+    template:
+    - "%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}
+      | Details: %{build_url} | Changes: %{compare_url}"
