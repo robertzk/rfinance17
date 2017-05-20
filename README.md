@@ -15,6 +15,10 @@ It is organized as follows:
   `model$predict(iris[1:5, ])` gives you some predictions.
 * The [Syberia talk slides](syberia_slides.pdf) (or [PPT format](https://github.com/robertzk/rfinance17/blob/master/syberia_slides.pptx)).
 
+Check out the [MicrosoftR](https://github.com/robertzk/MicrosoftR) engine that we built in
+15 minutes after [David Smith's talk](https://github.com/robertzk/rfinance17-notes/loanprediction.md). You can
+also see some [scratch notes](https://github.com/robertzk/rfinance17-notes).
+
 ### Execution
 
 Open R from the root of this project.
